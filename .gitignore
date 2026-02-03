@@ -1,0 +1,28 @@
+# Dependencies
+/node_modules
+/yarn.lock
+
+# Environment variables
+.env
+.env.local
+
+# Logs and temporary files
+npm-debug.log*
+*.log
+*.tgz
+pids
+*.pid
+*.seed
+lib-cov
+
+# Coverage and benchmarking
+coverage
+.nyc_output
+benchmarks/graphs
+
+# IDE files (optional, adjust as needed)
+.vscode/
+.idea/
+.DS_Store
+
+.env

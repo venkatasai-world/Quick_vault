@@ -1,0 +1,52 @@
+<div class="code-option">
+  <label for="codeType">Select an option:</label>
+  <select id="codeType" name="codeType">
+    <option value="manual">Manual Code</option>
+    <option value="generate">Generate Code</option>
+  </select>
+</div>
+
+<!-- Security Section -->
+<div class="security-section" style="max-width: 400px; margin: 15px auto; text-align: left;">
+
+  <!-- set security (for upload) -->
+  <div id="setSecuritySection" style="margin-bottom: 10px;">
+    <label style="display:block; font-size:14px; color:#374151; font-weight:600; margin-bottom:5px;">
+      Optional: Set Security Question
+    </label>
+    <select id="securityQuestionSelect" class="security-input"
+      style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; margin-bottom:5px;">
+      <option value="">-- No Security --</option>
+      <option value="What is your pet's name?">What is your pet's name?</option>
+      <option value="What city were you born in?">What city were you born in?</option>
+      <option value="What is your favorite color?">What is your favorite color?</option>
+      <option value="Custom">Custom...</option>
+    </select>
+    <input type="text" id="customSecurityQuestion" placeholder="Enter your question"
+      style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; display:none; margin-bottom:5px;">
+    <input type="text" id="securityAnswer" placeholder="Answer"
+      style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; display:none;">
+  </div>
+
+  <!-- answer security (for retrieve) -->
+  <div id="answerSecuritySection" style="display:none; margin-bottom: 10px;">
+    <p id="securityQuestionDisplay" style="font-weight:600; color:#374151; margin-bottom:5px;"></p>
+    <input type="text" id="securityAnswerChallenge" placeholder="Enter Answer"
+      style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db;">
+  </div>
+
+</div>
+
+<div class="manual-code" id="manualCode">
+  <input type="text" maxlength="1" class="code-input" data-index="0" inputmode="numeric" pattern="[0-9]">
+  <input type="text" maxlength="1" class="code-input" data-index="1" inputmode="numeric" pattern="[0-9]">
+  <input type="text" maxlength="1" class="code-input" data-index="2" inputmode="numeric" pattern="[0-9]">
+  <input type="text" maxlength="1" class="code-input" data-index="3" inputmode="numeric" pattern="[0-9]">
+</div>
+
+<div class="code-actions" id="codeActions">
+  <button type="button" id="uploadBtn" class="action-btn upload-btn" disabled>Save</button>
+  <button type="button" id="retrieveBtn" class="action-btn retrieve-btn" disabled>Retrieve</button>
+</div>
+
+<div id="messageBox" class="message-box" style="display: none;"></div>
